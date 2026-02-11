@@ -96,3 +96,180 @@ body {
     font-size: 0.9rem;
     background-color: rgba(0, 0, 0, 0.85);
 }
+
+
+/* ===== ESTILOS PARA ICONOS ===== */
+
+.iconos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.icono-item {
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+.icono-item:hover {
+    background-color: rgba(255, 152, 0, 0.3);
+    transform: translateY(-0.3rem);
+}
+
+.icono-item i {
+    font-size: 2.5rem;
+    color: #ffcc80;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.icono-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #bbdefb;
+}
+
+
+/* ===== ESTILOS PARA MENÚ DE TARJETAS ===== */
+
+.menu-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.menu-card {
+    background: linear-gradient(135deg, rgba(255, 152, 0, 0.2), rgba(13, 71, 161, 0.2));
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.menu-card:hover {
+    border-color: #ffcc80;
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0.5rem 1.5rem rgba(255, 152, 0, 0.3);
+}
+
+.menu-card i {
+    font-size: 3rem;
+    color: #ffcc80;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.menu-card h4 {
+    margin: 0.5rem 0;
+    color: #ffeb3b;
+    font-size: 1rem;
+}
+
+.menu-card p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #bbdefb;
+}
+
+
+/* ===== ESTILOS PARA TABLA DE COTEJO ===== */
+
+.tabla-cotejo {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.tabla-cotejo thead {
+    background-color: rgba(255, 152, 0, 0.3);
+}
+
+.tabla-cotejo th {
+    padding: 0.8rem;
+    text-align: left;
+    color: #ffeb3b;
+    font-weight: bold;
+    border-bottom: 2px solid #ff9800;
+}
+
+.tabla-cotejo td {
+    padding: 0.8rem;
+    border-bottom: 1px solid rgba(255, 152, 0, 0.2);
+    color: #ffffff;
+}
+
+.tabla-cotejo tbody tr:hover {
+    background-color: rgba(255, 152, 0, 0.15);
+}
+
+
+/* ===== ESTILOS PARA BOTONES ===== */
+
+.boton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-right: 0.5rem;
+}
+
+.boton:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.5rem 1rem rgba(255, 152, 0, 0.4);
+}
+
+.boton-danger {
+    background-color: #d32f2f;
+}
+
+.boton-danger:hover {
+    background-color: #c62828;
+    box-shadow: 0 0.5rem 1rem rgba(211, 47, 47, 0.4);
+}
+
+
+/* ===== ESTILOS ADICIONALES ===== */
+
+.card ul {
+    padding-left: 1.5rem;
+}
+
+.card ul li {
+    margin-bottom: 0.8rem;
+    color: #bbdefb;
+}
+
+.card h4 {
+    color: #ffcc80;
+    margin-top: 1rem;
+}
+
+.card pre {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    font-size: 0.9rem;
+}
+
+.card code {
+    color: #81c784;
+}
+
+.text-warning {
+    color: #ffeb3b !important;
+}
+
+.text-info {
+    color: #81d4fa !important;
+}
