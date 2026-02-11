@@ -1,186 +1,189 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Lección Web - Dragon Ball</title>
+    <meta charset="UTF-8">
+    <title>Dragon Ball | Lección Web</title>
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<style>
-
-body{
-    font-family: Arial, sans-serif;
-    margin:0;
-    background: linear-gradient(to right, #1f4037, #99f2c8);
-    color:white;
-    text-align:center;
-}
-
-/* HEADER */
-header{
-    background: rgba(0,0,0,0.6);
-    padding:20px;
-}
-
-h1{
-    margin:0;
-}
-
-/* CONTENEDOR */
-.container{
-    width:90%;
-    margin:auto;
-    padding:20px;
-}
-
-/* TARJETAS */
-.card{
-    background: rgba(0,0,0,0.5);
-    padding:20px;
-    margin:20px 0;
-    border-radius:15px;
-    box-shadow:0 0 15px black;
-}
-
-/* IMAGEN */
-img{
-    width:250px;
-    border-radius:15px;
-    margin:15px;
-}
-
-/* BOTONES */
-button{
-    background:#ff9800;
-    border:none;
-    padding:10px 20px;
-    border-radius:10px;
-    cursor:pointer;
-    font-weight:bold;
-    margin:10px;
-}
-
-button:hover{
-    background:#e68900;
-}
-
-/* VIDEO */
-#videoContainer{
-    display:none;
-    margin-top:20px;
-}
-
-/* FOOTER */
-footer{
-    background:black;
-    padding:15px;
-    margin-top:40px;
-}
-
-.icon-large{
-    font-size:40px;
-    margin:10px;
-}
-
-.info{
-    text-align:left;
-    margin-top:15px;
-}
-
-</style>
+    <!-- Tu CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <h1><i class="fa-solid fa-dragon fa-2x"></i> Dragon Ball - Interfaz con Iconos</h1>
-</header>
+    <!-- HEADER -->
+    <header class="header">
+        <h1>
+            <i class="fa-solid fa-dragon"></i>
+            Dragon Ball - Lección Web
+        </h1>
+        <h2>
+            <i class="fa-solid fa-pen-nib"></i>
+            Universo creado por Akira Toriyama
+        </h2>
+    </header>
 
-<div class="container">
+    <main class="contenedor">
 
-    <!-- SECCIÓN INFORMACIÓN -->
-    <div class="card">
-        <h2><i class="fa-solid fa-circle-info"></i> ¿Qué es Dragon Ball?</h2>
+        <!-- INFORMACIÓN -->
+        <section class="card">
+            <h3>
+                <i class="fa-solid fa-circle-info"></i>
+                ¿Qué es Dragon Ball?
+            </h3>
+            <p>
+                Dragon Ball es una franquicia japonesa creada por 
+                <strong>Akira Toriyama</strong> en 1984. Narra las aventuras de 
+                <strong>Son Goku</strong>, un guerrero saiyajin que protege la Tierra.
+            </p>
+            <p>
+                Está dividida en varias etapas: Dragon Ball, Dragon Ball Z,
+                Dragon Ball GT y Dragon Ball Super.
+            </p>
+        </section>
 
-        <div class="info">
+        <!-- CREADOR -->
+        <section class="card">
+            <h3>
+                <i class="fa-solid fa-user"></i>
+                Sobre el creador
+            </h3>
+            <p>
+                Akira Toriyama fue un mangaka japonés reconocido mundialmente.
+                Su estilo artístico influyó en generaciones y también trabajó
+                en videojuegos como Dragon Quest.
+            </p>
+        </section>
+
+        <!-- VIDEO -->
+        <section class="card accion">
+            <h3>
+                <i class="fa-solid fa-video"></i>
+                Video destacado
+            </h3>
+            <p>
+                Presiona el botón para mostrar u ocultar el tráiler oficial.
+            </p>
+
+            <button id="toggleVideo" class="boton">
+                <i class="fa-solid fa-play"></i>
+                Ver tráiler oficial
+            </button>
+        </section>
+
+        <section class="card video" id="seccionVideo" style="display:none;">
+            <h3>
+                <i class="fa-solid fa-film"></i>
+                Tráiler oficial
+            </h3>
+
+            <div class="video-container">
+                <iframe
+                    src="https://www.youtube.com/embed/xfeYnzXtdSs"
+                    title="Dragon Ball Tráiler Oficial"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <!-- PERSONAJES -->
+        <section class="card">
+            <h3>
+                <i class="fa-solid fa-star"></i>
+                Personajes y elementos principales
+            </h3>
+
+            <ul>
+                <li>
+                    <i class="fa-solid fa-bolt"></i>
+                    <strong>Goku:</strong> Protagonista y defensor de la Tierra.
+                </li>
+                <li>
+                    <i class="fa-solid fa-crown"></i>
+                    <strong>Vegeta:</strong> Príncipe de los saiyajin.
+                </li>
+                <li>
+                    <i class="fa-solid fa-gem"></i>
+                    <strong>Esferas del Dragón:</strong> Invocan a Shenlong.
+                </li>
+            </ul>
+
+            <div class="imagenes">
+                <img src="images/goku.jpg" alt="Goku">
+                <img src="images/vegeta.jpg" alt="Vegeta">
+                <img src="images/dragonballs.png" alt="Esferas del Dragón">
+            </div>
+        </section>
+
+        <!-- ESTADÍSTICAS -->
+        <section class="card">
+            <h3>
+                <i class="fa-solid fa-chart-line"></i>
+                Impacto mundial
+            </h3>
+
+            <div class="stats">
+                <div class="stat-box">
+                    <h4>1984</h4>
+                    <p>Año de creación</p>
+                </div>
+
+                <div class="stat-box">
+                    <h4>100+</h4>
+                    <p>Países transmitiendo</p>
+                </div>
+
+                <div class="stat-box">
+                    <h4>300M+</h4>
+                    <p>Copias vendidas</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
         <p>
-        <i class="fa-solid fa-star me-2"></i>
-        Dragon Ball es un anime y manga creado por <strong>Akira Toriyama</strong> en 1984.
+            <i class="fa-solid fa-copyright"></i>
+            lección usando REM derechos reservados por Andrew Joel ©😾
         </p>
+    </footer>
 
-        <p>
-        <i class="fa-solid fa-user"></i>
-        Akira Toriyama fue un famoso mangaka japonés reconocido mundialmente.
-        </p>
+    <!-- SCRIPT -->
+    <script>
+        const boton = document.getElementById("toggleVideo");
+        const seccionVideo = document.getElementById("seccionVideo");
+        const cards = document.querySelectorAll(".card");
 
-        <p>
-        <i class="fa-solid fa-bolt"></i>
-        La historia sigue las aventuras de Goku mientras protege la Tierra.
-        </p>
+        let videoVisible = false;
 
-        <p>
-        <i class="fa-solid fa-earth-americas"></i>
-        Es una de las series más influyentes del mundo.
-        </p>
-        </div>
+        boton.addEventListener("click", () => {
+            videoVisible = !videoVisible;
 
-        <img src="https://upload.wikimedia.org/wikipedia/en/0/0b/Dragon_Ball_manga_volume_1_cover.jpg">
-    </div>
+            if (videoVisible) {
+                seccionVideo.style.display = "block";
+                boton.innerHTML = '<i class="fa-solid fa-pause"></i> Ocultar tráiler oficial';
+                seccionVideo.scrollIntoView({ behavior: "smooth" });
+            } else {
+                seccionVideo.style.display = "none";
+                boton.innerHTML = '<i class="fa-solid fa-play"></i> Ver tráiler oficial';
+            }
+        });
 
-    <!-- ICONOS GRANDES -->
-    <div class="card">
-        <h2>Iconos Destacados</h2>
+        /* Animación reveal al hacer scroll */
+        window.addEventListener("scroll", () => {
+            cards.forEach(card => {
+                const posicion = card.getBoundingClientRect().top;
+                const pantalla = window.innerHeight;
 
-        <i class="fa-solid fa-dragon icon-large"></i>
-        <i class="fa-solid fa-bolt icon-large"></i>
-        <i class="fa-solid fa-fire icon-large"></i>
-        <i class="fa-solid fa-star icon-large"></i>
-        <i class="fa-solid fa-fist-raised icon-large"></i>
-        <i class="fa-solid fa-trophy icon-large"></i>
-    </div>
-
-    <!-- BOTONES -->
-    <div class="card">
-        <h2><i class="fa-solid fa-video"></i> Trailer Oficial</h2>
-
-        <button onclick="toggleVideo()">
-            <i class="fa-solid fa-play"></i> Ver trailer oficial
-        </button>
-
-        <button>
-            <i class="fa-solid fa-cart-shopping"></i> Comprar
-        </button>
-
-        <button>
-            <i class="fa-solid fa-heart"></i> Favorito
-        </button>
-
-        <div id="videoContainer">
-            <iframe width="560" height="315" 
-            src="https://www.youtube.com/embed/s36szNpqix4" 
-            frameborder="0" allowfullscreen>
-            </iframe>
-        </div>
-
-    </div>
-
-</div>
-
-<footer>
-    lección usando REM derechos reservados por Andrew Joel ©😾
-</footer>
-
-<script>
-function toggleVideo(){
-    let video = document.getElementById("videoContainer");
-
-    if(video.style.display === "none" || video.style.display === ""){
-        video.style.display = "block";
-    } else {
-        video.style.display = "none";
-    }
-}
-</script>
+                if (posicion < pantalla - 100) {
+                    card.classList.add("visible");
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
