@@ -1,147 +1,185 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dragon Ball | Iconos en Interfaces Web</title>
+<meta charset="UTF-8">
+<title>Lección Web - Dragon Ball</title>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<style>
 
-    <link rel="stylesheet" href="style.css">
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background: linear-gradient(to right, #1f4037, #99f2c8);
+    color:white;
+    text-align:center;
+}
+
+/* HEADER */
+header{
+    background: rgba(0,0,0,0.6);
+    padding:20px;
+}
+
+h1{
+    margin:0;
+}
+
+/* CONTENEDOR */
+.container{
+    width:90%;
+    margin:auto;
+    padding:20px;
+}
+
+/* TARJETAS */
+.card{
+    background: rgba(0,0,0,0.5);
+    padding:20px;
+    margin:20px 0;
+    border-radius:15px;
+    box-shadow:0 0 15px black;
+}
+
+/* IMAGEN */
+img{
+    width:250px;
+    border-radius:15px;
+    margin:15px;
+}
+
+/* BOTONES */
+button{
+    background:#ff9800;
+    border:none;
+    padding:10px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+    margin:10px;
+}
+
+button:hover{
+    background:#e68900;
+}
+
+/* VIDEO */
+#videoContainer{
+    display:none;
+    margin-top:20px;
+}
+
+/* FOOTER */
+footer{
+    background:black;
+    padding:15px;
+    margin-top:40px;
+}
+
+.icon-large{
+    font-size:40px;
+    margin:10px;
+}
+
+.info{
+    text-align:left;
+    margin-top:15px;
+}
+
+</style>
 </head>
-
 <body>
 
-<header class="header">
-    <h1>
-        <i class="fas fa-dragon fa-2x me-2 text-warning"></i>
-        Dragon Ball
-    </h1>
-    <h2>Inserción de Iconos en Interfaces Web</h2>
+<header>
+    <h1><i class="fa-solid fa-dragon fa-2x"></i> Dragon Ball - Interfaz con Iconos</h1>
 </header>
 
-<main class="contenedor">
+<div class="container">
 
-    <!-- PREGUNTA TEÓRICA -->
-    <section class="card">
-        <h3><i class="fas fa-question-circle me-2 text-info"></i>Pregunta</h3>
+    <!-- SECCIÓN INFORMACIÓN -->
+    <div class="card">
+        <h2><i class="fa-solid fa-circle-info"></i> ¿Qué es Dragon Ball?</h2>
+
+        <div class="info">
         <p>
-            ¿Por qué los iconos son mejores que texto en botones como “carrito” o “menú”?
+        <i class="fa-solid fa-star me-2"></i>
+        Dragon Ball es un anime y manga creado por <strong>Akira Toriyama</strong> en 1984.
         </p>
-        <h4 class="text-warning">Respuesta:</h4>
+
         <p>
-            Porque brindan claridad visual, son universales y ahorran espacio en la interfaz.
+        <i class="fa-solid fa-user"></i>
+        Akira Toriyama fue un famoso mangaka japonés reconocido mundialmente.
         </p>
-    </section>
+
+        <p>
+        <i class="fa-solid fa-bolt"></i>
+        La historia sigue las aventuras de Goku mientras protege la Tierra.
+        </p>
+
+        <p>
+        <i class="fa-solid fa-earth-americas"></i>
+        Es una de las series más influyentes del mundo.
+        </p>
+        </div>
+
+        <img src="https://upload.wikimedia.org/wikipedia/en/0/0b/Dragon_Ball_manga_volume_1_cover.jpg">
+    </div>
 
     <!-- ICONOS GRANDES -->
-    <section class="card">
-        <h3><i class="fas fa-star me-2"></i>Iconos destacados</h3>
+    <div class="card">
+        <h2>Iconos Destacados</h2>
 
-        <div class="iconos-grid">
-            <div class="icono-item">
-                <i class="fas fa-bolt fa-3x text-warning"></i>
-                <p>Energía</p>
-            </div>
+        <i class="fa-solid fa-dragon icon-large"></i>
+        <i class="fa-solid fa-bolt icon-large"></i>
+        <i class="fa-solid fa-fire icon-large"></i>
+        <i class="fa-solid fa-star icon-large"></i>
+        <i class="fa-solid fa-fist-raised icon-large"></i>
+        <i class="fa-solid fa-trophy icon-large"></i>
+    </div>
 
-            <div class="icono-item">
-                <i class="fas fa-fire fa-3x text-danger"></i>
-                <p>Poder</p>
-            </div>
+    <!-- BOTONES -->
+    <div class="card">
+        <h2><i class="fa-solid fa-video"></i> Trailer Oficial</h2>
 
-            <div class="icono-item">
-                <i class="bi bi-people-fill fs-1 text-info"></i>
-                <p>Guerreros</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN VIDEO -->
-    <section class="card">
-        <h3><i class="fas fa-video me-2"></i>Tráiler Oficial</h3>
-        <p>
-            Presiona el botón para mostrar u ocultar el tráiler oficial directamente en la página.
-        </p>
-
-        <button id="toggleVideo" class="boton">
-            <i class="fas fa-play-circle me-2"></i>
-            Ver tráiler oficial
+        <button onclick="toggleVideo()">
+            <i class="fa-solid fa-play"></i> Ver trailer oficial
         </button>
-    </section>
 
-    <section class="card video" id="seccionVideo">
-        <h3><i class="fas fa-film me-2"></i>Video Oficial</h3>
-        <div class="video-container">
-            <iframe
-                src="https://www.youtube.com/embed/xfeYnzXtdSs"
-                allowfullscreen>
+        <button>
+            <i class="fa-solid fa-cart-shopping"></i> Comprar
+        </button>
+
+        <button>
+            <i class="fa-solid fa-heart"></i> Favorito
+        </button>
+
+        <div id="videoContainer">
+            <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/s36szNpqix4" 
+            frameborder="0" allowfullscreen>
             </iframe>
         </div>
-    </section>
 
-    <!-- GALERÍA DE IMÁGENES -->
-    <section class="card">
-        <h3><i class="fas fa-users me-2"></i>Personajes</h3>
-        <div class="imagenes">
-            <img src="images/goku.jpg" alt="Goku">
-            <img src="images/vegeta.jpg" alt="Vegeta">
-            <img src="images/dragonballs.png" alt="Esferas del Dragón">
-        </div>
-    </section>
+    </div>
 
-    <!-- CONTACTO CON ICONOS Y MARGEN -->
-    <section class="card">
-        <h3><i class="fas fa-address-book me-2"></i>Contacto</h3>
+</div>
 
-        <p>
-            <i class="fas fa-envelope me-2 text-warning"></i>
-            correo@ejemplo.com
-        </p>
-
-        <p>
-            <i class="fas fa-phone me-2 text-info"></i>
-            +593
-        </p>
-
-        <p>
-            <i class="fas fa-map-marker-alt me-2 text-danger"></i>
-            Ecuador - Quito
-        </p>
-    </section>
-
-</main>
-
-<footer class="footer">
-    <p>
-        Lección usando REM derechos reservados por Andrew Joel ©😾
-    </p>
+<footer>
+    lección usando REM derechos reservados por Andrew Joel ©😾
 </footer>
 
 <script>
-    const boton = document.getElementById("toggleVideo");
-    const seccionVideo = document.getElementById("seccionVideo");
-    let videoVisible = false;
+function toggleVideo(){
+    let video = document.getElementById("videoContainer");
 
-    boton.addEventListener("click", () => {
-        videoVisible = !videoVisible;
-
-        if (videoVisible) {
-            seccionVideo.style.display = "block";
-            boton.innerHTML =
-                '<i class="fas fa-pause-circle me-2"></i>Ocultar tráiler oficial';
-            seccionVideo.scrollIntoView({ behavior: "smooth" });
-        } else {
-            seccionVideo.style.display = "none";
-            boton.innerHTML =
-                '<i class="fas fa-play-circle me-2"></i>Ver tráiler oficial';
-        }
-    });
+    if(video.style.display === "none" || video.style.display === ""){
+        video.style.display = "block";
+    } else {
+        video.style.display = "none";
+    }
+}
 </script>
 
 </body>
