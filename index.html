@@ -3,211 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dragon Ball | Lección Web</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Dragon Ball | Iconos en Interfaces Web</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header class="header">
-        <h1><i class="fas fa-fire"></i> Dragon Ball-Lección Web</h1>
-        <h2>Obra de Akira Toriyama</h2>
-    </header>
+<header class="header">
+    <h1>
+        <i class="fas fa-dragon fa-2x me-2 text-warning"></i>
+        Dragon Ball
+    </h1>
+    <h2>Inserción de Iconos en Interfaces Web</h2>
+</header>
 
-    <main class="contenedor">
+<main class="contenedor">
 
-        <section class="card">
-            <h3><i class="fas fa-info-circle"></i> ¿Qué es Dragon Ball?</h3>
-            <p>
-                Dragon Ball es una de las franquicias de anime y manga más influyentes
-                del mundo. Fue creada por Akira Toriyama y sigue las aventuras de Son Goku,
-                un guerrero que lucha por proteger la Tierra.
-            </p>
-        </section>
+    <!-- PREGUNTA TEÓRICA -->
+    <section class="card">
+        <h3><i class="fas fa-question-circle me-2 text-info"></i>Pregunta</h3>
+        <p>
+            ¿Por qué los iconos son mejores que texto en botones como “carrito” o “menú”?
+        </p>
+        <h4 class="text-warning">Respuesta:</h4>
+        <p>
+            Porque brindan claridad visual, son universales y ahorran espacio en la interfaz.
+        </p>
+    </section>
 
-        <section class="card accion">
-            <h3><i class="fas fa-video"></i> Video destacado</h3>
-            <p>
-                Presiona el botón para mostrar u ocultar el tráiler oficial
-                directamente en la página.
-            </p>
+    <!-- ICONOS GRANDES -->
+    <section class="card">
+        <h3><i class="fas fa-star me-2"></i>Iconos destacados</h3>
 
-            <button id="toggleVideo" class="boton">
-                <i class="fas fa-play-circle"></i> Ver tráiler 
-            </button>
-        </section>
-
-        <section class="card video" id="seccionVideo">
-            <h3><i class="fas fa-film"></i> Tráiler oficial</h3>
-
-            <div class="video-container">
-                <iframe
-                    src="https://www.youtube.com/embed/xfeYnzXtdSs"
-                    title="Dragon Ball Tráiler Oficial"
-                    allowfullscreen>
-                </iframe>
+        <div class="iconos-grid">
+            <div class="icono-item">
+                <i class="fas fa-bolt fa-3x text-warning"></i>
+                <p>Energía</p>
             </div>
-        </section>
 
-        <section class="card">
-            <h3><i class="fas fa-users"></i> Personajes y elementos</h3>
-            <div class="imagenes">
-                <img src="images/goku.jpg" alt="Goku">
-                <img src="images/vegeta.jpg" alt="Vegeta">
-                <img src="images/dragonballs.png" alt="Esferas del Dragón">
+            <div class="icono-item">
+                <i class="fas fa-fire fa-3x text-danger"></i>
+                <p>Poder</p>
             </div>
-        </section>
 
-        <!-- SECCIÓN DE ICONOS EN LA PÁGINA - LECCIÓN 3° BACHILLERATO -->
-        <section class="card">
-            <h3><i class="fas fa-icons"></i> Ejemplos de Iconos en Interfaces Web</h3>
-            <p><small><strong>Lección de 3° Bachillerato - Tema: Iconos en interfaces web</strong></small></p>
-            
-            <!-- 6+ Iconos diferentes -->
-            <div class="iconos-grid">
-                <div class="icono-item">
-                    <i class="fas fa-shopping-cart"></i>
-                    <p>Carrito</p>
-                </div>
-                <div class="icono-item">
-                    <i class="fas fa-heart"></i>
-                    <p>Favoritos</p>
-                </div>
-                <div class="icono-item">
-                    <i class="fas fa-user"></i>
-                    <p>Usuario</p>
-                </div>
-                <div class="icono-item">
-                    <i class="fas fa-search"></i>
-                    <p>Búsqueda</p>
-                </div>
-                <div class="icono-item">
-                    <i class="fas fa-bell"></i>
-                    <p>Notificaciones</p>
-                </div>
-                <div class="icono-item">
-                    <i class="fas fa-cog"></i>
-                    <p>Configuración</p>
-                </div>
+            <div class="icono-item">
+                <i class="bi bi-people-fill fs-1 text-info"></i>
+                <p>Guerreros</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Iconos en Botones -->
-        <section class="card">
-            <h3><i class="fas fa-mouse"></i> Iconos en Botones</h3>
-            <p>Los iconos dentro de botones mejoran la experiencia del usuario:</p>
-            <button class="boton">
-                <i class="fas fa-download"></i> Descargar
-            </button>
-            <button class="boton boton-danger">
-                <i class="fas fa-trash"></i> Eliminar
-            </button>
-        </section>
+    <!-- SECCIÓN VIDEO -->
+    <section class="card">
+        <h3><i class="fas fa-video me-2"></i>Tráiler Oficial</h3>
+        <p>
+            Presiona el botón para mostrar u ocultar el tráiler oficial directamente en la página.
+        </p>
 
-        <!-- Iconos con texto y margen -->
-        <section class="card">
-            <h3><i class="fas fa-align-left"></i> Iconos junto a Texto (con margen)</h3>
-            <p>
-                <i class="fas fa-envelope" style="margin-right: 10px; color: #ffcc80;"></i>
-                correo@ejemplo.com
-            </p>
-            <p>
-                <i class="fas fa-phone" style="margin-right: 10px; color: #81c784;"></i>
-                +593
-            </p>
-            <p>
-                <i class="fas fa-map-marker-alt" style="margin-right: 10px; color: #ef9a9a;"></i>
-               Ecuador- Quito
-            </p>
-        </section>
+        <button id="toggleVideo" class="boton">
+            <i class="fas fa-play-circle me-2"></i>
+            Ver tráiler oficial
+        </button>
+    </section>
 
-        <!-- Iconos con tamaños diferentes -->
-        <section class="card">
-            <h3><i class="fas fa-expand"></i> Iconos con Diferentes Tamaños</h3>
-            <p style="text-align: center; display: flex; justify-content: center; gap: 1rem; align-items: center;">
-                <i class="fas fa-star" style="font-size: 1.5rem;"></i>
-                <i class="fas fa-star fa-2x"></i>
-                <i class="fas fa-star fa-3x"></i>
-                <i class="fas fa-star" style="font-size: 3.5rem;"></i>
-            </p>
-        </section>
+    <section class="card video" id="seccionVideo">
+        <h3><i class="fas fa-film me-2"></i>Video Oficial</h3>
+        <div class="video-container">
+            <iframe
+                src="https://www.youtube.com/embed/xfeYnzXtdSs"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
 
-        <!-- Iconos con colores diferentes -->
-        <section class="card">
-            <h3><i class="fas fa-palette"></i> Iconos con Colores Diferentes</h3>
-            <div style="display: flex; justify-content: space-around; text-align: center; flex-wrap: wrap; gap: 1rem;">
-                <div>
-                    <i class="fas fa-heart fa-3x" style="color: #ef5350;"></i>
-                    <p style="margin-top: 0.5rem;">Rojo</p>
-                </div>
-                <div>
-                    <i class="fas fa-leaf fa-3x" style="color: #66bb6a;"></i>
-                    <p style="margin-top: 0.5rem;">Verde</p>
-                </div>
-                <div>
-                    <i class="fas fa-crown fa-3x" style="color: #ffca28;"></i>
-                    <p style="margin-top: 0.5rem;">Oro</p>
-                </div>
-                <div>
-                    <i class="fas fa-water fa-3x" style="color: #42a5f5;"></i>
-                    <p style="margin-top: 0.5rem;">Azul</p>
-                </div>
-            </div>
-        </section>
+    <!-- GALERÍA DE IMÁGENES -->
+    <section class="card">
+        <h3><i class="fas fa-users me-2"></i>Personajes</h3>
+        <div class="imagenes">
+            <img src="images/goku.jpg" alt="Goku">
+            <img src="images/vegeta.jpg" alt="Vegeta">
+            <img src="images/dragonballs.png" alt="Esferas del Dragón">
+        </div>
+    </section>
 
-        <!-- Iconos en tarjetas de menú -->
-        <section class="card">
-            <h3><i class="fas fa-th"></i> Iconos en Tarjetas de Menú</h3>
-            <div class="menu-cards">
-                <div class="menu-card">
-                    <i class="fas fa-home"></i>
-                    <h4>Inicio</h4>
-                    <p>Vuelve a la página principal</p>
-                </div>
-                <div class="menu-card">
-                    <i class="fas fa-book"></i>
-                    <h4>Lecciones</h4>
-                    <p>Accede a todo el contenido</p>
-                </div>
-                <div class="menu-card">
-                    <i class="fas fa-tasks"></i>
-                    <h4>Tareas</h4>
-                    <p>Revisa tus actividades</p>
-                </div>
-                <div class="menu-card">
-                    <i class="fas fa-award"></i>
-                    <h4>Certificados</h4>
-                    <p>Descarga tus logros</p>
-                </div>
-            </div>
-        </section>
+    <!-- CONTACTO CON ICONOS Y MARGEN -->
+    <section class="card">
+        <h3><i class="fas fa-address-book me-2"></i>Contacto</h3>
 
+        <p>
+            <i class="fas fa-envelope me-2 text-warning"></i>
+            correo@ejemplo.com
+        </p>
 
-    </main>
+        <p>
+            <i class="fas fa-phone me-2 text-info"></i>
+            +593
+        </p>
 
-    <footer class="footer">
-        <p><i class="fas fa-copyright"></i> Lección usando HTML, CSS y Font Awesome - Derechos reservados por Andrew Joel ©</p>
-    </footer>
+        <p>
+            <i class="fas fa-map-marker-alt me-2 text-danger"></i>
+            Ecuador - Quito
+        </p>
+    </section>
 
-    <script>
-        const boton = document.getElementById("toggleVideo");
-        const seccionVideo = document.getElementById("seccionVideo");
+</main>
 
-        let videoVisible = false;
+<footer class="footer">
+    <p>
+        Lección usando REM derechos reservados por Andrew Joel ©😾
+    </p>
+</footer>
 
-        boton.addEventListener("click", () => {
-            videoVisible = !videoVisible;
+<script>
+    const boton = document.getElementById("toggleVideo");
+    const seccionVideo = document.getElementById("seccionVideo");
+    let videoVisible = false;
 
-            if (videoVisible) {
-                seccionVideo.style.display = "block";
-                boton.innerHTML = '<i class="fas fa-pause-circle"></i> Ocultar tráiler oficial';
-                seccionVideo.scrollIntoView({ behavior: "smooth" });
-            } else {
-                seccionVideo.style.display = "none";
-                boton.innerHTML = '<i class="fas fa-play-circle"></i> Ver tráiler oficial';
-            }
-        });
-    </script>
+    boton.addEventListener("click", () => {
+        videoVisible = !videoVisible;
+
+        if (videoVisible) {
+            seccionVideo.style.display = "block";
+            boton.innerHTML =
+                '<i class="fas fa-pause-circle me-2"></i>Ocultar tráiler oficial';
+            seccionVideo.scrollIntoView({ behavior: "smooth" });
+        } else {
+            seccionVideo.style.display = "none";
+            boton.innerHTML =
+                '<i class="fas fa-play-circle me-2"></i>Ver tráiler oficial';
+        }
+    });
+</script>
 
 </body>
 </html>
